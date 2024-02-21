@@ -10,7 +10,7 @@
   padding: 35px;
   list-style: none;
   height: 85%;
-  width: 70%; 
+  width:auto-fit; 
 }
 
 .title {
