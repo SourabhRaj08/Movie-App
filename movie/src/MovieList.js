@@ -16,7 +16,7 @@ export default function MovieList({movies}) {
   return (
     <div >
         <div>
-            <button onClick={handleSort}>
+            <button onClick={handleSort} class="my-sort-button">
                 Sort by vote average ({sortOrder==="asc"?"Ascending":"Descending"})
             </button>
             

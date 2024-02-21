@@ -14,7 +14,7 @@ import Signup from './Components/Signup/Signup'
 export default function App() {
   const [movies,setMovies]=useState([])
   const [series,setSeries]=useState([])
-  const [currentMoviePage,setCurrentMoviePage] = useState(100);
+  const [currentMoviePage,setCurrentMoviePage] = useState(1);
   const [currentSeriesPage,setCurrentSeriesPage] = useState(1);
   const [totalMoviePages,setTotalMoviePages] = useState(0)
   const [totalSeriesPages,setTotalSeriesPages] = useState(0)
@@ -34,7 +34,6 @@ export default function App() {
      const reponse =await fetch(`https://api.themoviedb.org/3/tv/top_rated?api_key=f531333d637d0c44abc85b3e74db2186&language=en-US&page=${page}`);
      const result = await reponse.json()
      setSeries(result.results);
-     setCurrentMoviePage(1)
      setTotalMoviePages(result.total_pages);
  
     } catch (error) {

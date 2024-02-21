@@ -27,7 +27,7 @@ export default function FavMovie() {
   return (
     <div>
       <h1>Favorite Movies</h1>
-      {favoriteMovieIDs.length > 0?(
+      {favoriteMovieIDs.length > -100?(
         <MovieList movies={fav}/>
       ):<>
          <h1>No movies selected</h1>
